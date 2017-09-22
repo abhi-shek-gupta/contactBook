@@ -1,0 +1,56 @@
+body{
+    background-color: #eceeef;
+    }
+   input.ng-invalid.ng-touched {
+       border: 2px solid red;
+       
+   }
+   textarea.ng-invalid.ng-touched {
+       border: 2px solid red;
+       
+   }
+   #card1{
+     background-color: #f8b852;
+
+   }
+   .card{
+     position :absolute;
+     top: 50px;
+       }
+    .card-title{
+     font-weight: bold;
+     font-size: 50px;
+
+    }  
+    .mdl-chip__contact{
+     float: left;
+     height: 50px;
+     width:50px;
+     border-radius: 25px;
+     } 
+    .mdl-chip{
+     width:400%;
+     height: 50px;
+     border-radius: 25px;
+
+    }
+    .mdl-chip__text{
+     font-size: 18px;
+     vertical-align: middle;
+     display: inline-block;
+     font-weight: bold;
+     padding-top: 10px;
+
+    }
+    .mdl-color-text--white{
+     padding-top: 10px;
+     font-weight: bold;
+    }
+    #editButton{
+      background:#131690 ;
+      /* float:right; */
+    }
+
+    #deleteButton{
+     background:red;
+    }
