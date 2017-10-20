@@ -30,7 +30,7 @@ app.config(function($routeProvider,$locationProvider){
     $locationProvider.html5Mode(true);
 })
 
-app.controller('AController',function($http,$scope){
+app.controller('AController',function($http,$scope,$location){
     
     var refresh=function(){
              $http({
@@ -60,6 +60,7 @@ app.controller('AController',function($http,$scope){
                      refresh();
                      $scope.contact={};
                      console.log(response);
+                     $location.path('/');
                      alert("Contact added Succesfully");
                 },function(response){
                     console.log(response);
@@ -79,6 +80,9 @@ app.controller('ShowController',function($scope,$http,$routeParams){
                  }).then(function(response){
                     console.log(response);
                     $scope.contact=response.data.contact;
+                   $scope.x="https://maps.googleapis.com/maps/api/staticmap?center="+$scope.contact.address+"&zoom=14&size=227x267&scale=2&markers=color:redlabel:A|"+$scope.contact.address+"&key=AIzaSyCNGMl4gFASjIL1oXyGrkaycJkoUEl6TZY" ;
+                //    console.log($scope.contact.address);
+                //    console.log($scope.x);
                   },function(response){
                     console.log("error");
                     console.log(response);
@@ -109,7 +113,7 @@ app.controller('deleteController',function($scope,$http,$routeParams){
     
 });//deleteContact
 
-app.controller('editController',function($scope,$routeParams,$http){
+app.controller('editController',function($scope,$routeParams,$http,$location){
      console.log('editController called');
      var id=$routeParams.id
     $http({
@@ -142,6 +146,7 @@ $scope.submitForm=function(contact){
             $scope.contact={};
            // refresh();
             console.log($scope.contact);
+            $location.path('/');
             alert("updated Succesfully");
         },function(response){
             alert("Something went wrong ");

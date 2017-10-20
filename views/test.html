@@ -1,0 +1,28 @@
+<!doctype html>
+<html ng-app="mapApp">
+    <head></head>
+    <body>
+            <!-- <img src="https://maps.googleapis.com/maps/api/staticmap?center=rajpark,new delhi,India&zoom=14&size=400x400&key=AIzaSyCNGMl4gFASjIL1oXyGrkaycJkoUEl6TZY">
+            <br> -->
+            
+            <!-- <img src="https://maps.googleapis.com/maps/api/staticmap?center=rajpark,new delhi,India&zoom=14&size=400x400&scale=2&markers=color:redlabel:A|rajpark,delhi,India&key=AIzaSyCNGMl4gFASjIL1oXyGrkaycJkoUEl6TZY" ><br><br> -->
+            <!-- <img src="https://maps.googleapis.com/maps/api/staticmap?center=rajpark,new delhi,India&zoom=14&size=400x400&scale=2&markers=color:redlabel:A|sultanpuri, Delhi,India&key=AIzaSyCNGMl4gFASjIL1oXyGrkaycJkoUEl6TZY" ><br><br>
+            <img src="https://maps.googleapis.com/maps/api/staticmap?zoom=20&size=400x400&scale=2&markers=color:redlabel:A|rajPark, Delhi,India&key=AIzaSyCNGMl4gFASjIL1oXyGrkaycJkoUEl6TZY" ><br><br> -->
+            <div ng-controller="ImgController">    
+            <img src={{x}}>
+            </div>
+                    <script src="lib/angular.min.js"></script>
+                <script>
+                    var mapApp=angular.module("mapApp",[]);
+                    mapApp.controller("ImgController",function($scope,$http){
+
+                        $http().then()
+                            $scope.x="https://maps.googleapis.com/maps/api/staticmap?zoom=20&size=400x400&scale=2&markers=color:redlabel:A|Reliance Fresh, Nangloi Sultanpuri Road, Sher Singh Park, Delhi,India&key=AIzaSyCNGMl4gFASjIL1oXyGrkaycJkoUEl6TZY";
+
+                    });
+                    
+
+                    </script>
+
+    </body>
+</html>
